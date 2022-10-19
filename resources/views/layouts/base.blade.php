@@ -12,13 +12,20 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar__group">
-                <a class="navbar__link" href="#">Главная</a>
-                <a class="navbar__link" href="#">Вход</a>
-                <a class="navbar__link" href="#">Регистрация</a>
-                <form method="POST">
+                <a class="navbar__link" href="{{ route('index') }}">Главная</a>
+
+                @guest
+                <a class="navbar__link" href="{{ route('login') }}">Вход</a>
+                <a class="navbar__link" href="{{ route('register') }}">Регистрация</a>
+                @endguest
+
+                @auth
+                <p>{{ auth()->user()->name }}</p>
+                <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <input class="navbar__link" type="submit" value="Выход">
-                </form>
+                </form>   
+                @endauth
             </div>
         </div>
     </nav>

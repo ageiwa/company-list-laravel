@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,8 @@ use App\Http\Controllers\CompanyController;
 */
 
 Route::get('/', [CompanyController::class, 'index'])->name('index');
-Route::get('/{company}', [CompanyController::class, 'detail'])->name('detail');
 
 Auth::routes();
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/{company}', [CompanyController::class, 'detail'])->name('detail');
