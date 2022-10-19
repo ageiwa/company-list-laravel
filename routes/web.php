@@ -15,6 +15,7 @@ use App\Http\Controllers\CompanyController;
 */
 
 Route::get('/', [CompanyController::class, 'index'])->name('index');
+Route::get('/{company}', [CompanyController::class, 'detail'])->name('detail');
 
 Auth::routes();
 

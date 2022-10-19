@@ -10,7 +10,7 @@
             <div class="company">
                 <h2 class="company__name">{{ $company->name }}</h2>
                 <p class="company__info">{{ $company->info }}</p>
-                <a class="company__link" href="#">Подробнее</a>
+                <a class="company__link" href="{{ route('detail', ['company' => $company->id]) }}">Подробнее</a>
             </div>
             @endforeach
 

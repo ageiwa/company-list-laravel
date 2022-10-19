@@ -12,4 +12,10 @@ class CompanyController extends Controller
             'companies' => Company::latest()->get()
         ]);
     }
+
+    public function detail(Company $company) {
+        return view('detail', [
+            'company' => $company
+        ]);
+    }
 }
