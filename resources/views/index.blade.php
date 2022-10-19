@@ -22,12 +22,12 @@
             @csrf
             <h2 class="companies__header">Добавить компанию</h2>
             <div class="add-form__container">
-                <input class="add-form__input" type="text" name="name" placeholder="Название">
-                <input class="add-form__input" type="number" name="inn" placeholder="ИНН">
-                <textarea class="add-form__textarea" name="info" placeholder="Информация о компании"></textarea>
-                <input class="add-form__input" type="text" name="gen_director" placeholder="Генеральный директор">
-                <input class="add-form__input" type="text" name="address" placeholder="Адрес">
-                <input class="add-form__input" type="tel" name="tel" placeholder="Телефон">
+                <input class="add-form__input input-control" type="text" name="name" placeholder="Название">
+                <input class="add-form__input input-control" type="number" name="inn" placeholder="ИНН">
+                <textarea class="add-form__textarea input-control" name="info" placeholder="Информация о компании"></textarea>
+                <input class="add-form__input input-control" type="text" name="gen_director" placeholder="Генеральный директор">
+                <input class="add-form__input input-control" type="text" name="address" placeholder="Адрес">
+                <input class="add-form__input input-control" type="tel" name="tel" placeholder="Телефон">
             </div>
             <input class="add-form__btn" type="submit" value="Добавить">
         </form>

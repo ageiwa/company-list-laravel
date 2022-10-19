@@ -18,5 +18,5 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [CompanyController::class, 'index'])->name('index');
 
 Auth::routes();
-
+Route::post('/create.company', [CompanyController::class, 'createCompany'])->name('create.company');
 Route::get('/{company}', [CompanyController::class, 'detail'])->name('detail');
