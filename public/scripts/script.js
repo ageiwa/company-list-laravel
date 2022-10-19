@@ -28,6 +28,10 @@ formAdd.addEventListener('submit', (e) => {
     xhr.setRequestHeader("X-CSRF-TOKEN", metaCSRFToken);
     xhr.addEventListener('readystatechange', () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
+            const companiesContainer = document.querySelector('.companies').firstElementChild;
+
+            companiesContainer.innerHTML += xhr.responseText;
+
             console.log(xhr.responseText);
         }
     });

@@ -11,7 +11,7 @@ class CompanyController extends Controller
 {
     public function index() {
         return view('index', [
-            'companies' => Company::latest()->get(),
+            'companies' => Company::get(),
         ]);
     }
 
@@ -32,6 +32,15 @@ class CompanyController extends Controller
             'tel' => $request->tel
         ]);
 
-        // return $request;
+        $company = Company::latest()->first();
+
+        $returnData = 
+        '<div class="company">
+            <h2 class="company__name">'. $company->name .'</h2>
+            <p class="company__info">'. $company->info .'</p>
+            <a class="company__link" href="http://company-list.test/'. $company->id .'">Подробнее</a>
+        </div>';
+
+        return $returnData;
     }
 }
