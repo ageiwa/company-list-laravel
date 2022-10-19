@@ -3,5 +3,17 @@
 @section('title', 'Главная')
 
 @section('content')
-    <h1>Hello</h1>
+    <section class="companies">
+        <div class="container">
+
+            @foreach ($companies as $company)
+            <div class="company">
+                <h2 class="company__name">{{ $company->name }}</h2>
+                <p class="company__info">{{ $company->info }}</p>
+                <a class="company__link" href="#">Подробнее</a>
+            </div>
+            @endforeach
+
+        </div>
+    </section>
 @endsection
