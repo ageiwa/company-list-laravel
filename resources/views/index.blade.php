@@ -17,19 +17,19 @@
         </div>
 
         <button class="companies__add-button">Добавить компанию</button>
-        <form class="companies__add-form">
+
+        <form class="companies__add-form add-form_disable">
             @csrf
+            <h2 class="companies__header">Добавить компанию</h2>
             <div class="add-form__container">
-                <input type="text" name="name" placeholder="Название">
-                <input type="number" name="inn" placeholder="ИНН">
-                <textarea name="info" placeholder="Информация о компании"></textarea>
-                <input type="text" name="gen_director" placeholder="Генеральный директор">
-                <input type="text" name="address" placeholder="Адрес">
-                <input type="tel" name="tel" placeholder="Телефон">
+                <input class="add-form__input" type="text" name="name" placeholder="Название">
+                <input class="add-form__input" type="number" name="inn" placeholder="ИНН">
+                <textarea class="add-form__textarea" name="info" placeholder="Информация о компании"></textarea>
+                <input class="add-form__input" type="text" name="gen_director" placeholder="Генеральный директор">
+                <input class="add-form__input" type="text" name="address" placeholder="Адрес">
+                <input class="add-form__input" type="tel" name="tel" placeholder="Телефон">
             </div>
-            <input type="submit" value="Добавить">
+            <input class="add-form__btn" type="submit" value="Добавить">
         </form>
     </section>
-
-    <script src="/scripts/script.js"></script>
 @endsection
