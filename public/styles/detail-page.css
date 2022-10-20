@@ -9,3 +9,11 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.panel__group {
+    display: flex;
+}
+
+.panel__company-name {
+    margin-right: 20px;
+}

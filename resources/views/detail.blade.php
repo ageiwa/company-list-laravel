@@ -9,7 +9,12 @@
     <section class="panel">
         <div class="container">
             <div class="panel__group">
-                <h2>{{ $company->name }}</h2>
+                <h2 class="panel__company-name">{{ $company->name }}</h2>
+                <select>
+                    @foreach ($company->toField as $fields)
+                        <option>{{ $fields->field }}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
     </section>
