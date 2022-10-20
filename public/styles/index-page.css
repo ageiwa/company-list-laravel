@@ -21,6 +21,7 @@
 
 .company__info {
     padding: 10px;
+    overflow: hidden;
 }
 
 .company__link {
