@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Company;
+use App\Models\Field;
+use Illuminate\Support\Facades\Schema;
 
 class CompanyController extends Controller
 {
@@ -22,7 +24,7 @@ class CompanyController extends Controller
     }
 
     public function createCompany(Request $request) {
-        
+
         Company::create([
             'name' => $request->name,
             'inn' => $request->inn,
@@ -33,7 +35,17 @@ class CompanyController extends Controller
         ]);
 
         $company = Company::latest()->first();
+        $companyCollumns = Schema::getColumnListing('companies');
 
+        foreach ($companyCollumns as $collumn) {
+            if ($collumn !== 'id' && $collumn !== 'created_at' && $collumn !== 'updated_at') {
+                Field::create([
+                    'company_id' => $company->id,
+                    'field' => $collumn
+                ]);
+            }
+        }
+        
         $returnData = 
         '<div class="company">
             <h2 class="company__name">'. $company->name .'</h2>
