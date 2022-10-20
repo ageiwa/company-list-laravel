@@ -28,12 +28,12 @@
             @csrf
             <h2 class="form__header">Добавить компанию</h2>
             <div class="form__container">
-                <input class="form__input" type="text" name="name" placeholder="Название">
-                <input class="form__input" type="number" name="inn" placeholder="ИНН">
-                <textarea class="form__textarea" name="info" placeholder="Информация о компании"></textarea>
-                <input class="form__input" type="text" name="gen_director" placeholder="Генеральный директор">
-                <input class="form__input" type="text" name="address" placeholder="Адрес">
-                <input class="form__input" type="tel" name="tel" placeholder="Телефон">
+                <input class="form__input" type="text" name="name" placeholder="Название" required>
+                <input class="form__input" type="number" name="inn" placeholder="ИНН" required>
+                <textarea class="form__textarea" name="info" placeholder="Информация о компании" required></textarea>
+                <input class="form__input" type="text" name="gen_director" placeholder="Генеральный директор" required>
+                <input class="form__input" type="text" name="address" placeholder="Адрес" required>
+                <input class="form__input" type="tel" name="tel" placeholder="Телефон" required>
             </div>
             <input class="form__submit" type="submit" value="Добавить">
         </form>
