@@ -38,7 +38,7 @@ class CompanyController extends Controller
         '<div class="company">
             <h2 class="company__name">'. $company->name .'</h2>
             <p class="company__info">'. $company->info .'</p>
-            <a class="company__link" href="http://company-list.test/'. $company->id .'">Подробнее</a>
+            <a class="company__link" href="/'. $company->id .'">Подробнее</a>
         </div>';
 
         return $returnData;

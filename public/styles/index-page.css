@@ -1,0 +1,54 @@
+.companies .container {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.company {
+    border: 1px solid #000;
+    height: 230px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.company__name {
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+}
+
+.company__info {
+    padding: 10px;
+}
+
+.company__link {
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+}
+
+.company__link:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.companies__add-button {
+    margin: 20px auto;
+    border: 1px solid #000;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    display: block;
+}
+
+.companies__add-button:hover {
+    color: #000;
+    background-color: #fff;
+}

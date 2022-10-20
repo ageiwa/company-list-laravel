@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    @yield('styles')
     <title>@yield('title')</title>
 </head>
 <body>
@@ -36,6 +38,6 @@
 
     @yield('content')
 
-    <script src="/scripts/script.js"></script>
+    @yield('scripts')
 </body>
 </html>

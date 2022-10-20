@@ -1,8 +1,14 @@
 @extends('layouts.base')
 
+@section('styles')
+    <link rel="stylesheet" href="/styles/index-page.css">
+    <link rel="stylesheet" href="/styles/form.css">
+@endsection
+
 @section('title', 'Главная')
 
 @section('content')
+
     <section class="companies">
         <div class="container">
 
@@ -18,18 +24,23 @@
 
         <button class="companies__add-button">Добавить компанию</button>
 
-        <form class="companies__add-form add-form_disable">
+        <form class="form form-add_hide" id="form-add">
             @csrf
-            <h2 class="companies__header">Добавить компанию</h2>
-            <div class="add-form__container">
-                <input class="add-form__input input-control" type="text" name="name" placeholder="Название">
-                <input class="add-form__input input-control" type="number" name="inn" placeholder="ИНН">
-                <textarea class="add-form__textarea input-control" name="info" placeholder="Информация о компании"></textarea>
-                <input class="add-form__input input-control" type="text" name="gen_director" placeholder="Генеральный директор">
-                <input class="add-form__input input-control" type="text" name="address" placeholder="Адрес">
-                <input class="add-form__input input-control" type="tel" name="tel" placeholder="Телефон">
+            <h2 class="form__header">Добавить компанию</h2>
+            <div class="form__container">
+                <input class="form__input" type="text" name="name" placeholder="Название">
+                <input class="form__input" type="number" name="inn" placeholder="ИНН">
+                <textarea class="form__textarea" name="info" placeholder="Информация о компании"></textarea>
+                <input class="form__input" type="text" name="gen_director" placeholder="Генеральный директор">
+                <input class="form__input" type="text" name="address" placeholder="Адрес">
+                <input class="form__input" type="tel" name="tel" placeholder="Телефон">
             </div>
-            <input class="add-form__btn" type="submit" value="Добавить">
+            <input class="form__submit" type="submit" value="Добавить">
         </form>
     </section>
+
+    @section('scripts')
+        <script src="/scripts/showHideForm.js"></script>
+        <script src="/scripts/createCompany.js"></script>
+    @endsection
 @endsection
