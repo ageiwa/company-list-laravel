@@ -29,9 +29,9 @@ class CommentController extends Controller
         foreach ($comments as $comment) {
             $response[] = 
             '<div class="comment">
-                <h2>'. $authUser->name .'</h2>
-                <p>'. $comment->text_com .'</p>
-                <p>'. $comment->created_at .'</p>
+                <h2 class="comment__username">'. $authUser->name .'</h2>
+                <p class="comment__text">'. $comment->text_com .'</p>
+                <p class="comment__date">'. $comment->created_at .'</p>
             </div>';
         }
 
