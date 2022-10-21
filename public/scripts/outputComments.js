@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
     const selectField = document.querySelector('#select-field');
+    outputComment(selectField.value);
 
     selectField.addEventListener('change', () => {
         outputComment(selectField.value);
