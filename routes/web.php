@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -19,4 +20,5 @@ Route::get('/', [CompanyController::class, 'index'])->name('index');
 
 Auth::routes();
 Route::post('/create.company', [CompanyController::class, 'createCompany'])->name('create.company');
+Route::post('/create.comment', [CommentController::class, 'createComment'])->name('create.comment');
 Route::get('/{company}', [CompanyController::class, 'detail'])->name('detail');

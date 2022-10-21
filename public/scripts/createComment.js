@@ -8,11 +8,11 @@ window.addEventListener('load', () => {
         const text_com = formAddCommets.elements.text_com.value;
         const fieldId = selectField.value;
 
-        
+        createComment(text_com, fieldId);
     });
 });
 
-function createComment() {
+function createComment(text_com, fieldId) {
     const params = 'text_com=' + text_com + '&fieldId=' + fieldId;
 
     const metaCSRFToken = document.head.querySelector("[name=csrf-token]").getAttribute('content');
