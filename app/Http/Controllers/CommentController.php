@@ -14,4 +14,27 @@ class CommentController extends Controller
             'text_com' => $request->text_com
         ]);
     }
+
+    public function output(Request $request) {
+        $authUser = Auth::user();
+        $selectField = $request->field;
+
+        $comments = Comment::where([
+            'user_id' => $authUser->id,
+            'field_id' => $selectField
+        ])->get();
+
+        $response = array();
+
+        foreach ($comments as $comment) {
+            $response[] = 
+            '<div class="comment">
+                <h2>'. $authUser->name .'</h2>
+                <p>'. $comment->text_com .'</p>
+                <p>'. $comment->created_at .'</p>
+            </div>';
+        }
+
+        return $response;
+    }
 }

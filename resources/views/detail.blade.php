@@ -32,7 +32,7 @@
             <input class="form__submit" type="submit" value="Добавить">
         </form>
 
-        <div class="container">
+        <div class="container" id="comments-list">
 
         </div>
 
@@ -40,5 +40,6 @@
 
     @section('scripts')
         <script src="/scripts/createComment.js"></script>
+        <script src="/scripts/outputComments.js"></script>
     @endsection
 @endsection

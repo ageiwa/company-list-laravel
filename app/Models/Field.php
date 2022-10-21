@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Company;
+use App\Models\Comment;
 
 class Field extends Model
 {
@@ -12,5 +13,9 @@ class Field extends Model
 
     public function toCompany() {
         return $this->belongsTo(Company::class);
+    }
+
+    public function toComment() {
+        return $this->hasMany(Comment::class);
     }
 }
