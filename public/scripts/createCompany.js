@@ -13,7 +13,8 @@ window.addEventListener('load', () => {
 
         requestCreateCompany(name, inn, info, gen_director, address, tel);
     });
-})
+
+});
 
 function requestCreateCompany(name, inn, info, gen_director, address, tel) {
     const params = 'name=' + name + '&inn=' + inn + '&info=' + info + '&gen_director=' + gen_director + '&address=' + address + '&tel=' + tel;
@@ -22,15 +23,15 @@ function requestCreateCompany(name, inn, info, gen_director, address, tel) {
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/create.company');
+
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.setRequestHeader("X-CSRF-TOKEN", metaCSRFToken);
+
     xhr.addEventListener('readystatechange', () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const companiesContainer = document.querySelector('.companies').firstElementChild;
 
             companiesContainer.innerHTML += xhr.responseText;
-
-            console.log(xhr.responseText);
         }
     });
     xhr.send(params);

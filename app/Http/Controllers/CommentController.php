@@ -13,6 +13,10 @@ class CommentController extends Controller
             'field_id' => $request->fieldId,
             'text_com' => $request->text_com
         ]);
+
+        // $response = Comment::latest()->first();
+
+        // return $response;
     }
 
     public function output(Request $request) {
