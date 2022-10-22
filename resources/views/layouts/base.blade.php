@@ -15,10 +15,9 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar__group">
-                <a class="navbar__link" href="{{ route('index') }}">Главная</a>
+                <a class="navbar__link" href="{{ route('index') }}">КАТАЛОГ</a>
             </div>
             <div class="navbar__group">
-                
                 @guest
                 <a class="navbar__link" href="{{ route('login') }}">Вход</a>
                 <a class="navbar__link" href="{{ route('register') }}">Регистрация</a>
