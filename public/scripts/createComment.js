@@ -11,7 +11,6 @@ window.addEventListener('load', () => {
         const fieldId = selectField.value;
 
         createComment(text_com, fieldId);
-        outputComment(selectField.value);
     });
 
     selectField.addEventListener('change', () => outputComment(selectField.value));
@@ -32,6 +31,10 @@ function createComment(text_com, fieldId) {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const formAddCommets = document.querySelector('#form-add-comment');
             formAddCommets.elements.text_com.value = '';
+            formAddCommets.classList.add('form-comment_hide');
+
+            const selectField = document.querySelector('#select-field');
+            outputComment(selectField.value);
         }
     });
     
@@ -51,9 +54,11 @@ function outputComment(field) {
 
     xhr.addEventListener('readystatechange', () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
+            const commentsCount = document.querySelector('.panel__comment-count');
             const commentsList = document.querySelector('#comments-list');
             const response = JSON.parse(xhr.responseText);
 
+            commentsCount.innerText = 'Комментарии: ' + response.length;
             commentsList.innerHTML = '';
             response.forEach(elem => commentsList.innerHTML += elem);
         }
