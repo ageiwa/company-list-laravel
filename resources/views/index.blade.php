@@ -22,7 +22,13 @@
 
         </div>
 
-        <button class="companies__add-button">Добавить компанию</button>
+        @guest
+        <a class="companies__add-button link" href="{{ route('login') }}">Добавить компанию</a>
+        @endguest
+
+        @auth
+        <button class="companies__add-button">Добавить компанию</button>    
+        @endauth
 
         <form class="form form-add_hide" id="form-add">
             @csrf

@@ -41,9 +41,17 @@
     <section class="comments">
 
         <form class="form form-comment_hide" id="form-add-comment">
-            <h2 class="form__header">Коментарий</h2>
+            <h2 class="form__header">Комментарий</h2>
             <textarea class="form__textarea" name="text_com"></textarea>
+
+            @guest
+            <a class="form__submit" href="{{ route('login') }}">Добавить</a>
+            @endguest
+
+            @auth
             <input class="form__submit" type="submit" value="Добавить">
+            @endauth
+
         </form>
 
         <div class="container" id="comments-list">
@@ -54,6 +62,9 @@
 
     @section('scripts')
         <script src="/scripts/showHideFormComment.js"></script>
+        
+        @auth
         <script src="/scripts/createComment.js"></script>
+        @endauth
     @endsection
 @endsection

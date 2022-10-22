@@ -1,6 +1,8 @@
 .companies {
     padding-top: 20px;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .companies .container {
@@ -54,8 +56,8 @@
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
-    display: block;
 }
 
 .companies__add-button:hover {
