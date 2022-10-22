@@ -35,24 +35,22 @@ class CompanyController extends Controller
         ]);
 
         $company = Company::latest()->first();
-        $companyCollumns = Schema::getColumnListing('companies');
+        $collumns = ['Компания', 'Название', 'ИНН', 'Общая информация', 'Генеральный директор', 'Адрес', 'Телефон'];
 
-        foreach ($companyCollumns as $collumn) {
-            if ($collumn !== 'id' && $collumn !== 'created_at' && $collumn !== 'updated_at') {
-                Field::create([
-                    'company_id' => $company->id,
-                    'field' => $collumn
-                ]);
-            }
+        foreach ($collumns as $collumn) {
+            Field::create([
+                'company_id' => $company->id,
+                'field' => $collumn
+            ]);
         }
         
-        $returnData = 
+        $response = 
         '<div class="company">
             <h2 class="company__name">'. $company->name .'</h2>
             <p class="company__info">'. $company->info .'</p>
             <a class="company__link" href="/'. $company->id .'">Подробнее</a>
         </div>';
 
-        return $returnData;
+        return $response;
     }
 }
