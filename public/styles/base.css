@@ -5,6 +5,10 @@
     font-family: sans-serif;
 }
 
+html {
+    background-color: #e7e7e7;
+}
+
 .container {
     margin: 0 auto;
     width: 900px;

@@ -13,9 +13,9 @@
             <div class="panel__group">
                 <h2 class="panel__company-name">{{ $company->name }}</h2>
 
-                <select name="fieldId" id="select-field">
+                <select class="panel__select" name="fieldId" id="select-field">
                     @foreach ($company->toField as $fields)
-                        <option value="{{ $fields->id }}">{{ $fields->field }}</option>
+                        <option class="panel__option" value="{{ $fields->id }}">{{ $fields->field }}</option>
                     @endforeach
                 </select>
 
