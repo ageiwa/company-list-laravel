@@ -20,8 +20,8 @@
             </div>
             <div class="navbar__group">
                 @guest
-                <a class="navbar__link" href="{{ route('login') }}">Вход</a>
-                <a class="navbar__link" href="{{ route('register') }}">Регистрация</a>
+                <a class="navbar__link navbar__login" href="{{ route('login') }}">Вход</a>
+                <a class="navbar__link navbar__register" href="{{ route('register') }}">Регистрация</a>
                 @endguest
 
                  @auth

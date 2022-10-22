@@ -32,6 +32,10 @@
         font-size: 14px;
     }
 
+    .navbar__register {
+        display: none;
+    }
+
     .companies .container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -49,11 +53,15 @@
         flex-direction: column;
     }
 
-    .comment {
+    .comment, .form {
         width: 100%;
     }
 
-    .form {
-        width: 100%;
+    .login, .register {
+        padding: 10px;
+    }
+
+    .login__link, .login__text-or {
+        display: block;
     }
 }
