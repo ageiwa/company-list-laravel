@@ -12,10 +12,27 @@
 
 .panel__group {
     display: flex;
+    align-items: center;
 }
 
 .panel__company-name {
     margin-right: 20px;
+}
+
+.panel__btn {
+    margin: 10px;
+    border: 1px solid #000;
+    padding: 10px;
+    width: 50px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.panel__btn:hover {
+    color: #000;
+    background-color: #fff;
 }
 
 .comment {

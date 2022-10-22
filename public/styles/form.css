@@ -54,6 +54,6 @@
     display: none;
 }
 
-.form__input-check {
-
+.form-comment_hide {
+    display: none;
 }

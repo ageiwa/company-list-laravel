@@ -21,12 +21,22 @@
 
             </div>
 
+            <div class="panel__group">
+
+                <div class="panel__group">
+                    <button class="panel__btn" id="show-form-comment">+</button>
+                    <button class="panel__btn" id="hide-form-comment">-</button>
+                </div>
+                
+                <p class="panel__comment-count">Комментарии: 0</p>
+            </div>
+
         </div>
     </section>
 
     <section class="comments">
 
-        <form class="form" id="form-add-comment">
+        <form class="form form-comment_hide" id="form-add-comment">
             <h2 class="form__header">Коментарий</h2>
             <textarea class="form__textarea" name="text_com"></textarea>
             <input class="form__submit" type="submit" value="Добавить">
@@ -39,7 +49,7 @@
     </section>
 
     @section('scripts')
+        <script src="/scripts/showHideFormComment.js"></script>
         <script src="/scripts/createComment.js"></script>
-        <script src="/scripts/outputComments.js"></script>
     @endsection
 @endsection

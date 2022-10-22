@@ -24,13 +24,17 @@ function createComment(text_com, fieldId) {
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/create.comment');
+
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.setRequestHeader("X-CSRF-TOKEN", metaCSRFToken);
+
     xhr.addEventListener('readystatechange', () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log(xhr.responseText);
+            const formAddCommets = document.querySelector('#form-add-comment');
+            formAddCommets.elements.text_com.value = '';
         }
     });
+    
     xhr.send(params);
 }
 
