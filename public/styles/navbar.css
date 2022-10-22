@@ -15,6 +15,10 @@
     align-items: center;
 }
 
+.navbar__username {
+    font-size: 18px;
+}
+
 .navbar__link {
     margin: 10px;
     border: 2px solid #000;

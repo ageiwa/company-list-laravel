@@ -58,7 +58,7 @@ function outputComment(field) {
             const commentsList = document.querySelector('#comments-list');
             const response = JSON.parse(xhr.responseText);
 
-            commentsCount.innerText = 'Комментарии: ' + response.length;
+            commentsCount.innerText = response.length;
             commentsList.innerHTML = '';
             response.forEach(elem => commentsList.innerHTML += elem);
         }

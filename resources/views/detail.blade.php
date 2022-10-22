@@ -10,7 +10,7 @@
     <section class="panel">
         <div class="container">
 
-            <div class="panel__group">
+            <div class="panel__group panel__group_left">
                 <h2 class="panel__company-name">{{ $company->name }}</h2>
 
                 <select class="panel__select" name="fieldId" id="select-field">
@@ -21,14 +21,18 @@
 
             </div>
 
-            <div class="panel__group">
+            <div class="panel__group panel__group_right">
 
-                <div class="panel__group">
+                <div class="panel__group-wrap panel__group-wrap_left">
                     <button class="panel__btn" id="show-form-comment">+</button>
                     <button class="panel__btn" id="hide-form-comment">-</button>
                 </div>
-                
-                <p class="panel__comment-count">Комментарии: 0</p>
+
+                <div class="panel__group-wrap">
+                    <p class="panel__comment-text">Комментарии:</p>
+                    <p class="panel__comment-count">0</p>
+                </div>
+    
             </div>
 
         </div>

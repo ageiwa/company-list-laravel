@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/navbar.css">
     @yield('styles')
+    <link rel="stylesheet" href="/styles/css-breakpoints.css">
     <title>@yield('title')</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar__group">
-                <a class="navbar__link" href="{{ route('index') }}">КАТАЛОГ</a>
+                <a class="navbar__link" href="{{ route('index') }}">КОМПАНИИ</a>
             </div>
             <div class="navbar__group">
                 @guest
@@ -24,7 +25,7 @@
                 @endguest
 
                  @auth
-                <p>{{ auth()->user()->name }}</p>
+                <p class="navbar__username">{{ auth()->user()->name }}</p>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <input class="navbar__link" type="submit" value="Выход">
