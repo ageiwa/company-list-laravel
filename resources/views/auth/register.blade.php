@@ -52,7 +52,7 @@
                     autocomplete="new-password" placeholder="Повторите пароль">
             </div>
 
-            <button type="submit" class="form__submit">Регистрация</button>
+            <button type="submit" class="form__submit">Зарегистрироваться</button>
         </form>
     </div>
 @endsection

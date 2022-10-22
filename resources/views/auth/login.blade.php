@@ -41,7 +41,7 @@
                 </label>
             </div>
 
-            <button type="submit" class="form__submit">Вход</button>
+            <button type="submit" class="form__submit">Войти</button>
 
         </form>
     </div>
