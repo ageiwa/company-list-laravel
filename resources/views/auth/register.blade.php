@@ -19,9 +19,9 @@
                         value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Имя">
     
                     @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                        <div class="form__container" role="alert">
+                            <p class="invalid-feedback">{{ $message }}</p>
+                        </div>
                     @enderror
                 </div>
     
@@ -30,9 +30,9 @@
                         value="{{ old('email') }}" required autocomplete="email" placeholder="Электронная почта">
     
                     @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                        <div class="form__container" role="alert">
+                            <p class="invalid-feedback">{{ $message }}</p>
+                        </div>
                     @enderror
                 </div>
     
@@ -42,9 +42,9 @@
                         name="password" required autocomplete="new-password" placeholder="Пароль">
     
                     @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                        <div class="form__container" role="alert">
+                            <p class="invalid-feedback">{{ $message }}</p>
+                        </div>
                     @enderror
                 </div>
     

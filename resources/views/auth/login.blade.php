@@ -16,9 +16,9 @@
                         value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Электронная почта">
     
                     @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                        <div class="form__container" role="alert">
+                            <p class="invalid-feedback">{{ $message }}</p>
+                        </div>
                     @enderror
                 </div>
     
@@ -27,9 +27,9 @@
                         name="password" required autocomplete="current-password" placeholder="Пароль">
     
                     @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                        <div class="form__container" role="alert">
+                            <p class="invalid-feedback">{{ $message }}</p>
+                        </div>
                     @enderror
                 </div>
     
