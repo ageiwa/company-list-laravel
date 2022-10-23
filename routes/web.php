@@ -22,6 +22,6 @@ Auth::routes();
 Route::post('/create.company', [CompanyController::class, 'createCompany'])->name('create.company');
 
 Route::post('/create.comment', [CommentController::class, 'createComment'])->name('create.comment');
-Route::post('/output.comment', [CommentController::class, 'output'])->name('output.comment');
+Route::get('/output.comment', [CommentController::class, 'output'])->name('output.comment');
 
 Route::get('/{company}', [CompanyController::class, 'detail'])->name('detail');

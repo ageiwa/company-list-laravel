@@ -42,14 +42,14 @@ function createComment(text_com, fieldId) {
 }
 
 function outputComment(field) {
-    const params = 'field=' + field;
+    const params = '?field=' + field;
 
     const metaCSRFToken = document.head.querySelector("[name=csrf-token]").getAttribute('content');
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/output.comment');
+    xhr.open('GET', '/output.comment' + params);
 
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-url');
     xhr.setRequestHeader("X-CSRF-TOKEN", metaCSRFToken);
 
     xhr.addEventListener('readystatechange', () => {
@@ -64,5 +64,5 @@ function outputComment(field) {
         }
     });
     
-    xhr.send(params);
+    xhr.send();
 }
